@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 3, from LayoutIt!</title>
+    <title>Unlight無廣告 Unlight短網址</title>
 
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
@@ -60,7 +60,7 @@
 								<li class="divider">
 								</li>
 								<li>
-									<a href="#">表社</a>
+									<a href="http://fb.co/groups/unlightcc">表社</a>
 								</li>
 								<li>
 									<a href="#">K島</a>
@@ -68,7 +68,7 @@
 								<li class="divider">
 								</li>
 								<li>
-									<a href="#">unlight.moe</a>
+									<a href="http://unlight.moe/">unlight.moe</a>
 								</li>
 								<li>
 									<a href="http://unlightonly.com">unlightonly</a>
@@ -178,9 +178,9 @@ function shorten() {
 }
 function googl(url) {
   if (url.id) {
-    el("span", -2).innerHTML+="<br>"+url.id.replace("http://goo.gl/","http://unlight.cc/s").replace("https://goo.gl/","https://unlight.cc/s");
+    el("form", -1).innerHTML+="<br>"+url.id.replace("http://goo.gl/","http://unlight.cc/s").replace("https://goo.gl/","https://unlight.cc/s");
   } else if (url.message) {
-    el("span", -2).innerHTML+=url.message;
+    el("form", -1).innerHTML+=url.message;
   } else {console.log(url);}
 }
 </script>
