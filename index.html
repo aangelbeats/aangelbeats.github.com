@@ -76,7 +76,7 @@
 							</ul>
 						</li>
 					</ul>
-					<form class="navbar-form navbar-left" role="search">
+					<form class="navbar-form navbar-left" role="search" onsubmit="shorten(); return false;">
 						<div class="form-group">
 							<input type="text" class="form-control">
 						</div> 
@@ -170,7 +170,20 @@
 		</div>
 	</div>
 </div>
-
+<script>
+function shorten() {
+  var scr=document.createElement("script");
+  scr.setAttribute('src', 'https://script.google.com/macros/s/AKfycbwozxad2D1z7mkqOZVWyGVW9OTLiimh2ryifR06NBrktskQuHLX/exec?longurl='+el("input", -1).value);
+  el("body", -1).appendChild(scr);
+}
+function googl(url) {
+  if (url.id) {
+    el("span", -2).innerHTML+="<br>"+url.id.replace("http://goo.gl/","http://unlight.cc/s").replace("https://goo.gl/","https://unlight.cc/s");
+  } else if (url.message) {
+    el("span", -2).innerHTML+=url.message;
+  } else {console.log(url);}
+}
+</script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
