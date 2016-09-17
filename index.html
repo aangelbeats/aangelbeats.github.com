@@ -176,6 +176,12 @@ Submit</button>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!--script src="js/scripts.js"></script-->
-  
-
+  <script>
+var href=document.location.href,lin;
+if (href.indexOf("?")>-1||href.indexOf("php")>-1) {
+lin=href.replace(".tw",".moe");
+} else {
+lin=href.replace(/[^/]+\.tw/,"official.unlight.com.tw");}
+document.write("<a id=\"lin\" href=\""+lin+"\" role=\"button\" class=\"btn\">Continue to "+lin+"</a>");
+</script>
 </body></html>
