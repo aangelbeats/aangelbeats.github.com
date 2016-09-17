@@ -175,7 +175,7 @@ Submit</button>
 <a id="modal-938328" href="#modal-container-938328" role="button" class="btn" data-toggle="modal">打開最新訊息</a>
 		 
 <!-- Modal -->
-<div class="modal fade in" id="modal-container-938328" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block; padding-right: 17px;">
+<div class="modal fade in" id="modal-container-938328" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -190,6 +190,7 @@ lin=href.replace(".tw",".moe");
 } else {
 lin=href.replace(/[^/]+\.tw/,"official.unlight.com.tw");}
 document.write("<a id=\"lin\" href=\""+lin+"\" role=\"button\" class=\"btn\">Continue to "+lin+"</a>");
+document.all["modal-938328"].click();
 </script></div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
