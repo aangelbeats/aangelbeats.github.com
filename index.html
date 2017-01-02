@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html>
-  <head><script>var link=["fireflower","sakuranoame","ul","minnan","mi","simon","tenso"];onhashchange=function(){
+  <head><script>var link=["fireflower","sakuranoame","ul","minnan","mi","simon","tenso","bookmarklet"];onhashchange=function(){
 for (var i=1;i<=link.length;i++) {
     document.all[link[i-1]].style.display="none";
     document.all[link[i-1]+"link"].className="list-group-item";}
@@ -39,7 +39,12 @@ Acute
 <p class="list-group-item-text">
 ReAct
 </p>
-</div> <a class="list-group-item" href="#ul" id="ullink"><span class="badge">2016年11月30日</span>Unlight</a> <a class="list-group-item" href="#minnan" id="minnanlink"><span class="badge">2016年12月16日</span>台灣閩南語的變遷</a> <a class="list-group-item" href="#mi" id="milink"><span class="badge">2016年5月20日</span>小米炫彩耳機+小米圈鐵耳機+小米行動電源開箱</a><a class="list-group-item" href="#simon" id="simonlink"><span class="badge">2016年5月8日</span>希萌創意開箱+金石堂開箱(x2)</a><a class="list-group-item" href="#tenso" id="tensolink"><span class="badge">2016年4月10日</span>tenso.com開箱+金石堂開箱</a>
+</div> <a class="list-group-item" href="#ul" id="ullink"><span class="badge">2016年11月30日</span>Unlight</a>
+<a class="list-group-item" href="#minnan" id="minnanlink"><span class="badge">2016年12月16日</span>台灣閩南語的變遷</a>
+<a class="list-group-item" href="#mi" id="milink"><span class="badge">2016年5月20日</span>小米炫彩耳機+小米圈鐵耳機+小米行動電源開箱</a>
+<a class="list-group-item" href="#simon" id="simonlink"><span class="badge">2016年5月8日</span>希萌創意開箱+金石堂開箱(x2)</a>
+<a class="list-group-item" href="#tenso" id="tensolink"><span class="badge">2016年4月10日</span>tenso.com開箱+金石堂開箱</a>
+<a class="list-group-item" href="#bookmarklet" id="bookmarkletlink"><span class="badge">2016年3月1日</span>程式小書籤</a>
 <div class="list-group-item">
 <span class="badge">2017年1月2日</span>
 <h4 class="list-group-item-heading">
@@ -1463,6 +1468,40 @@ ReAct
 				
 				
 				
+			</div>
+			<div id="bookmarklet">
+				<h2>
+					程式小書籤教學
+				</h2>
+				
+				<div>
+					小書籤來自bookmarklet，可以在網頁執行動態的功能，如果想要有解鎖的功能，可以參考下列的語法。
+					<textarea class="form-control">javascript:(function() { function R(a){ona = "on"+a; if(window.addEventListener) window.addEventListener(a, function (e) { for(var n=e.originalTarget; n; n=n.parentNode) n[ona]=null; }, true); window[ona]=null; document[ona]=null; if(document.body) document.body[ona]=null; } R("contextmenu"); R("click"); R("mousedown"); R("mouseup"); R("selectstart");})()
+</textarea>
+				</div>
+				<div>
+					上面程式做的事是把使用者的操作的所有上面的一些原本的設定取消掉，這樣就可以達到取消原本的限制。
+				</div>
+				<div>
+					但是簡化程序可以將下面這個超連結加到我的最愛，這樣以後只要按這個我的最愛書籤，就可以直接取消限制。
+				</div><a href='javascript:(function() { function R(a){ona = "on"+a; if(window.addEventListener) window.addEventListener(a, function (e) { for(var n=e.originalTarget; n; n=n.parentNode) n[ona]=null; }, true); window[ona]=null; document[ona]=null; if(document.body) document.body[ona]=null; } R("contextmenu"); R("click"); R("mousedown"); R("mouseup"); R("selectstart");})()'>解鎖</a>
+				<div>
+					Chrome的話就可以直接將上面的拉到書籤列即可完成加到我的最愛。或者可以手動到書籤編輯在網址填入上面的語法也有同樣的效果。
+				</div>
+				<div>
+					但是並不是所有的鎖右鍵都可以解決，因為有的語法沒辦法解決。像是還有CSS的USER-SELECT也是和這個無關的，而且ADDEVENTLISTENER的語法好像也不能解。
+				</div>
+				<div>
+					此外，還有一些好用的小書籤
+				</div>
+				<div>
+					<p>
+						<a title="加到我的最愛" href="javascript%3Awith(frames%5B1%5D)%7Bvar%20tr%3Ddocument.getElementsByTagName(%22tr%22)%3Bfor%20(var%20i%3D1%3Bi%3C%3Dtr.length%3Bi%2B%2B)%20%7Bvar%20tmp%3Dtr%5Bi-1%5D%2C%20td%3Dtmp.getElementsByTagName(%22td%22)%3Bif%20(td.length%3E%3D15%26%26td.length%3C30)%20%7Bvar%20mat%3DMath.round((parseInt(td%5B12-1%5D.innerText)-parseInt(td%5B14-1%5D.innerText))%2F(parseInt(td%5B15-1%5D.innerText)%2B1)*10000)%2F10000*100%3Bvar%20bg%3DparseInt(mat%3E100%3F100%3Amat)%3Btmp.innerHTML%2B%3D'%3Ctd%20style%3D%22color%3A%20white%3B%20background-color%3Argb('%2B(100-bg)%2B'%2C'%2B(bg%2B60)%2B'%2C0)%3B%22%3E'%2BMath.round(mat*100)%2F100%2B%22%25%3C%2Ftd%3E%22%3B%7D%20else%20if%20(td.length%3C15)%20%7Btmp.innerHTML%2B%3D%22%3Ctd%3E%3C%2Ftd%3E%22%3B%7D%7D%7Dvoid%200%3B">小程式</a>
+					</p>
+					<p>
+						把上面的書籤小程式加到我的最愛，就可以用在加退選系統的精進上了，可以看到該門課選上的機率。其他像是志願選課也可以用小書籤過濾掉衝堂的科目，這樣就不用等到選了之後才知道衝堂。
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
