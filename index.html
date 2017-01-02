@@ -1,7 +1,12 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+  <head><script>var link=["fireflower","sakuranoame","ul","minnan","mi","simon","tenso"];onhashchange=function(){
+for (var i=1;i<=link.length;i++) {
+document.all[link[i-1]].style.display="none";
+document.all[link[i-1]+"link"].className="list-group-item";}
+document.all[i=document.location.hash.substr(1)].style.display="";
+document.all[i+"link"].className+=" active";}</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,36 +23,36 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="list-group">
-				 <a href="#fireflower" class="list-group-item active"><span class="badge">2016年12月17日</span>Fire◎Flower</a> <a class="list-group-item" href="#sakuranoame"><span class="badge">2016年8月31日</span>櫻之雨</a>
-				<div class="list-group-item">
-					 <span class="badge">2016年12月21日</span>
-					<h4 class="list-group-item-heading">
-						進行中
-					</h4> <span class="badge">2016年12月31日</span>
-					<p class="list-group-item-text">
-						Acute
-					</p>
-					<p class="list-group-item-text">
-						ReAct
-					</p>
-				</div> <a class="list-group-item" href="#ul"><span class="badge">2016年11月30日</span>Unlight</a> <a class="list-group-item" href="#minnan"><span class="badge">2016年12月16日</span>台灣閩南語的變遷</a> <a class="list-group-item" href="#mi"><span class="badge">2016年5月20日</span>小米炫彩耳機+小米圈鐵耳機+小米行動電源開箱</a><a class="list-group-item" href="#simon"><span class="badge">2016年5月8日</span>希萌創意開箱+金石堂開箱(x2)</a><a class="list-group-item" href="#tenso"><span class="badge">2016年4月10日</span>tenso.com開箱+金石堂開箱</a>
-				<div class="list-group-item">
-					 <span class="badge">2017年1月2日</span>
-					<h4 class="list-group-item-heading">
-						網站作者
-					</h4>
-					<p class="list-group-item-text">
-						作者為目前在工讀的學生
-					</p>
-					<p class="list-group-item-text">
-						也負責維護一些網頁的工作
-					</p>
-					<p class="list-group-item-text">
-						除了Unlight那篇文章不是本人所作外
-					</p>
-				</div><a class="list-group-item" href="ul.html"><span class="badge">2017年1月1日</span>歡迎使用和參觀UL無廣告</a>
-			</div>
+<div class="list-group">
+<a href="#fireflower" class="list-group-item" id="fireflowerlink"><span class="badge">2016年12月17日</span>Fire◎Flower</a> <a class="list-group-item active" href="#sakuranoame" id="sakuranoamelink"><span class="badge">2016年8月31日</span>櫻之雨</a>
+<div class="list-group-item">
+<span class="badge">2016年12月21日</span>
+<h4 class="list-group-item-heading">
+進行中
+</h4> <span class="badge">2016年12月31日</span>
+<p class="list-group-item-text">
+Acute
+</p>
+<p class="list-group-item-text">
+ReAct
+</p>
+</div> <a class="list-group-item" href="#ul" id="ullink"><span class="badge">2016年11月30日</span>Unlight</a> <a class="list-group-item" href="#minnan" id="minnanlink"><span class="badge">2016年12月16日</span>台灣閩南語的變遷</a> <a class="list-group-item" href="#mi" id="milink"><span class="badge">2016年5月20日</span>小米炫彩耳機+小米圈鐵耳機+小米行動電源開箱</a><a class="list-group-item" href="#simon" id="simonlink"><span class="badge">2016年5月8日</span>希萌創意開箱+金石堂開箱(x2)</a><a class="list-group-item" href="#tenso" id="tensolink"><span class="badge">2016年4月10日</span>tenso.com開箱+金石堂開箱</a>
+<div class="list-group-item">
+<span class="badge">2017年1月2日</span>
+<h4 class="list-group-item-heading">
+網站作者
+</h4>
+<p class="list-group-item-text">
+作者為目前在工讀的學生
+</p>
+<p class="list-group-item-text">
+也負責維護一些網頁的工作
+</p>
+<p class="list-group-item-text">
+除了Unlight那篇文章不是本人所作外
+</p>
+</div><a class="list-group-item" href="ul.html"><span class="badge">2017年1月1日</span>歡迎使用和參觀UL無廣告</a>
+</div>
 		</div>
 		<div class="col-md-8">
 			<div id="fireflower">
