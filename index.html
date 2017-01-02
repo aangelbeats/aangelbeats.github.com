@@ -3,9 +3,11 @@
 <html>
   <head><script>var link=["fireflower","sakuranoame","ul","minnan","mi","simon","tenso"];onhashchange=function(){
 for (var i=1;i<=link.length;i++) {
-document.all[link[i-1]].style.display="none";
-document.all[link[i-1]+"link"].className="list-group-item";}
-document.all[i=document.location.hash.substr(1)].style.display="";
+    document.all[link[i-1]].style.display="none";
+    document.all[link[i-1]+"link"].className="list-group-item";}
+if (document.all[i=document.location.hash.substr(1)]==null) {
+    document.location.hash="fireflower";}
+document.all[i].style.display="";
 document.all[i+"link"].className+=" active";}</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +16,7 @@ document.all[i+"link"].className+=" active";}</script>
     <title>Unlight非官方</title>
 
     <meta name="description" content="個人網站">
-    <meta name="author" content="LayoutIt!">
+    <meta name="author" content="Unlight非官方">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
@@ -24,7 +26,7 @@ document.all[i+"link"].className+=" active";}</script>
 	<div class="row">
 		<div class="col-md-4">
 <div class="list-group">
-<a href="#fireflower" class="list-group-item" id="fireflowerlink"><span class="badge">2016年12月17日</span>Fire◎Flower</a> <a class="list-group-item active" href="#sakuranoame" id="sakuranoamelink"><span class="badge">2016年8月31日</span>櫻之雨</a>
+<a class="list-group-item active" href="#fireflower" id="fireflowerlink"><span class="badge">2016年12月17日</span>Fire◎Flower</a> <a class="list-group-item" href="#sakuranoame" id="sakuranoamelink"><span class="badge">2016年8月31日</span>櫻之雨</a>
 <div class="list-group-item">
 <span class="badge">2016年12月21日</span>
 <h4 class="list-group-item-heading">
